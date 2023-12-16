@@ -1,0 +1,128 @@
+
+.products-wrapper {
+    background-color: rgb(118, 51, 120);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products-centering {
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: rgb(109, 24, 99);
+    border: 1px solid white;
+}
+
+.products-centering::-webkit-scrollbar {
+    width: 0;
+}
+
+.product-card {
+    width: 50%;
+    height: 625px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.add-product-card {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(57, 31, 82);
+    border-radius: 20px;
+}
+.add-product-card a {
+    width: 30%;
+    height: 30%;
+    cursor: pointer;
+}
+.add-product-image {
+    background-image: url(../images/icons/plus-icon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+.product-card-centering {
+    background-color: rgb(57, 31, 82);
+    border-radius: 20px;
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-image-wrapper {
+    width: 75%;
+    height: 50%;
+    display: flex;
+}
+.product-image-front, .product-image-back {
+    width: 50%;
+    height: 100%;
+}
+#productName, #productDescription, #productPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+#productName {
+    font-size: 25px;
+    border-bottom: 1px solid white;
+}
+#productDescription {
+    font-size: 20px;
+    text-align: center;
+}
+#productPrice {
+    padding: 20px 0;
+    color: rgb(18, 226, 18);
+    font-size: 25px;
+}
+
+.product-manage-button-wrapper {
+    width: 100%;
+    padding-top: 15px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-manage-delete-button {
+    background-color: rgb(202, 51, 122);
+    font-size: 18px;
+    color: white;
+    height: 50px;
+    width: 60%;
+    border: 1px solid black;
+    font-family: "Lato", "Arial", sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.product-manage-delete-button:hover {
+    transform: scale(1.05);
+}

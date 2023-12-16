@@ -1,0 +1,143 @@
+/* FRONT AND BOTTOM INFO */
+.front-info, .bottom-info {
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.front-info-bg, .bottom-info-bg {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/backgrounds/retro-city-background.jpg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+}
+
+.front-info-bg-blind, .bottom-info-bg-blind {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 1;
+}
+
+.front-info-text-wrapper, .bottom-info-text-wrapper {
+    width: 250px;
+    height: 100%;
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-info-text-wrapper {
+    width: 350px;
+}
+.front-info-text, .bottom-info-text {
+    font-size: 40px;
+    color: white;
+    font-family: "Lato", "Arial", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SHOP PRODUCTS */
+.index-products {
+    background-color: rgb(118, 51, 120);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.index-products-centering {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-card {
+    width: 50%;
+    height: 625px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-card-centering {
+    background-color: rgb(57, 31, 82);
+    border-radius: 20px;
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-image-wrapper {
+    width: 75%;
+    height: 50%;
+    display: flex;
+    pointer-events: none;
+}
+
+.product-image-front, .product-image-back {
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+}
+#productName {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    font-family: "Lato", "Arial", sans-serif;
+    border-bottom: 1px solid white;
+}
+#productDescription {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: "Lato", "Arial", sans-serif;
+    padding: 10px 0;
+}
+#productPrice {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    color: rgb(18, 226, 18);
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 25px;
+}
+.buy-button {
+    background-color: rgb(202, 51, 122);
+    font-size: 18px;
+    color: white;
+    height: 50px;
+    width: 80%;
+    border: 1px solid black;
+    font-family: "Lato", "Arial", sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.buy-button:hover {
+    transform: scale(1.05);
+}

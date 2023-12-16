@@ -1,0 +1,48 @@
+{% extends 'siteapp/base.html' %}
+{% load static %}
+
+{% block sitystyle %}     
+<link rel="stylesheet" href="{% static 'siteapp/css/productManagement.css'%}">
+{% endblock %}
+
+{% block title %} Product Management {% endblock %}
+
+{% block content %} 
+
+
+<section class="products-wrapper">
+    <div class="products-centering">
+
+        <div class="product-card">
+            <div class="add-product-card">
+                <a href="/create/" id="addNewProductButton">
+                    <div class="add-product-image"></div>
+                </a>
+            </div>
+        </div>
+
+
+
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-card-centering">
+                <div class="product-image-wrapper">
+                    <img class="product-image-front" src="{{ product.frontIMG.url }}" alt="{{ product.frontIMG }}">
+                    <img class="product-image-back" src="{{ product.backIMG.url }}" alt="{{ product.backIMG }}">
+                </div>
+                <p id="productName">{{ product.title }}</p>
+                <p id="productDescription">{{ product.description }}</p>
+                <p id="productPrice">{{ product.price }}$</p>
+                <form action="/delete/{{ product.id }}" method="post" class="product-manage-button-wrapper">
+                    {% csrf_token %}
+                    <button class="product-manage-delete-button">Delete</button>
+                </form method="post">
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+
+{% endblock %}
+

@@ -1,0 +1,71 @@
+{% extends 'siteapp/base.html' %}
+{% load static %}
+
+{% block title %} Skins From Badili {% endblock %}
+
+
+
+
+
+{% block content %} 
+
+
+<section class="front-info">
+    <div class="front-info-bg"></div>
+    <div class="front-info-bg-blind">
+        <div class="front-info-text-wrapper">
+            <p class="front-info-text">
+                Your best skin 
+                is right here!
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="index-products" id="indexProducts">
+    <div class="index-products-centering">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-card-centering">
+                <div class="product-image-wrapper">
+                    <img class="product-image-front" src="{{ product.frontIMG.url }}" alt="{{ product.frontIMG }}">
+                    <img class="product-image-back" src="{{ product.backIMG.url }}" alt="{{ product.backIMG }}">
+                </div>
+                <p id="productName">{{ product.title }}</p>
+                <p id="productDescription">{{ product.description }}</p>
+                <p id="productPrice">{{ product.price }}$</p>
+                <button class="buy-button">BUY</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="bottom-info">
+    <div class="bottom-info-bg"></div>
+    <div class="bottom-info-bg-blind">
+        <div class="bottom-info-text-wrapper">
+            <p class="bottom-info-text">
+                Have you already 
+                chosen your look?
+            </p>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+
+

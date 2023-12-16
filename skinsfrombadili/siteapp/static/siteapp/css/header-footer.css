@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+input::-webkit-input-placeholder {
+    color: #cecece;
+} 
+
+
+
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(93, 45, 131);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-page-link {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skins-from-badili-icon {
+    background-image: url(../images/icons/skins-from-badili-icon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+}
+
+.header-link-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    list-style: none;
+}
+.header-link-list__item {
+    width: calc(100%/3 - 30px);
+    height: 70%;
+    transition: 0.3s;
+}
+.header-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Lato", "Arial", sans-serif;
+}
+.user-login-li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.user-login-image {
+    position: absolute;
+    background-image: url(../images/icons/owner-icon.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+}
+#userLoginAccount {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.header-link-list__item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(82, 44, 119);
+    display: flex;
+}
+#aboutUs, #socialNetworks{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-us-header {
+    width: 70%;
+    font-size: 30px;
+    color: white;
+    font-family: "Lato", "Arial", sans-serif;
+}
+.about-us-text {
+    width: 70%;
+    font-size: 20px;
+    padding-top: 30px;
+    color: white;
+    font-family: "Lato", "Arial", sans-serif;
+}
+.footer-link-list {
+    list-style: none;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.footer-link-list__item {
+    width: 100%;
+}
+.footer-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 25px;
+    gap: 20px;
+    width: 80%;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+.telegram-icon, .vk-icon, .phone-icon {
+    background-image: url(../images/social-networks/telegram-icon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+}
+.vk-icon {
+    background-image: url(../images/social-networks/vk-icon.png);
+}
+.footer-link:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#phoneNumber {
+    color: white;
+    font-family: "Lato", "Arial", sans-serif;
+}
+.phone-number-wrapper {
+    width: 80%;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+.phone-icon {
+    background-image: url(../images/icons/phone-icon.png);
+}

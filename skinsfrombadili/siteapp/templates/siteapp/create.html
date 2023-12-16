@@ -1,0 +1,55 @@
+{% extends 'siteapp/base.html' %}
+
+{% load static %}
+{% block sitystyle %}     
+<link rel="stylesheet" href="{% static 'siteapp/css/create.css'%}">
+{% endblock %}
+
+{% block title %} Add new product {% endblock %}
+
+
+
+{% block content %} 
+
+<section class="add-product-wrapper">
+    <form enctype="multipart/form-data" method="post" class="add-product-form">
+        {% csrf_token %}
+
+        <label class="skin-image-input-wrapper">
+            {{ form.frontIMG }}       
+            <span class="skin-image-btn">Load front skin view</span>
+            <span class="frontIMG-file-text"></span>
+        </label>
+
+        <label class="skin-image-input-wrapper">
+            {{ form.backIMG }}       
+            <span class="skin-image-btn">Load rear skin view</span>
+            <span class="backIMG-file-text"></span>
+        </label>
+        
+        <div class="preview-product-info-wrapper">
+            {{ form.title }}
+            {{ form.description }}
+            {{ form.price }}
+        </div>
+        <div class="add-product-button-wrapper">
+            <button id="addProductButton">
+                Add a product
+            </button>
+        </div>
+        <div class="error-message-wrapper">
+            <p id="addProductErrorMessage" style="display: none;">
+                * Not all fields are filled in correctly!
+            </p>
+        </div>
+    
+    </form>
+    
+</section>
+
+
+<script src="{% static 'siteapp/js/create.js'%}"></script>
+
+
+
+{% endblock %}

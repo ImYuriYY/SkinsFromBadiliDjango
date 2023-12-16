@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'siteapp/css/header-footer.css'%}">
+    {% block sitystyle %}     
+    <link rel="stylesheet" href="{% static 'siteapp/css/index.css'%}">
+    {% endblock %}
+    <title>{% block title %} Base {% endblock %}</title>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="home-page-link">
+            <div class="skins-from-badili-icon"></div>
+        </a>
+        <ul class="header-link-list">
+            <li class="header-link-list__item">
+                <a href="{% url 'homepage' %}#aboutUs" class="header-link">
+                    About Us
+                </a>
+            </li>
+            <li class="header-link-list__item">
+                <a href="{% url 'homepage' %}#socialNetworks" class="header-link">
+                    Social Networks
+                </a>
+            </li>
+            <li class="header-link-list__item user-login-li">
+                <div class="user-login-image"></div>
+                <a href="/productManagement/" class="header-link" id="userLoginAccount"></a>
+            </li>
+        </ul>
+    </header>
+    
+
+
+
+
+
+
+
+    {% block content %}
+
+    Content
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+    <footer>
+        <div id="aboutUs">
+            <p class="about-us-header">
+                About us
+            </p>
+            <p class="about-us-text">
+                Skins From Badili - is not just a band. 
+                This is a new word in the Minecraft 
+                gaming industry. A creative association 
+                of the best Artists, Developers, Content 
+                Makers has gathered here to create unique 
+                content!
+            </p>
+        </div>
+        
+        <div id="socialNetworks">
+            <ul class="footer-link-list">
+                <li class="footer-link-list__item">
+                    <a href="http://t.me/Bad1l1" class="footer-link" target="_blank">
+                        <div class="telegram-icon"></div>
+                        <p>Telegram</p> 
+                    </a>
+                </li>
+                <li class="footer-link-list__item">
+                    <a href="http://vk.com/im_yc" class="footer-link" target="_blank">
+                        <div class="vk-icon"></div>
+                        <p>VK</p>
+                    </a>
+                </li>
+                <li class="footer-link-list__item" id="phoneNumber">
+                    <div class="phone-number-wrapper">
+                        <div class="phone-icon"></div>
+                        <p>+89520190024</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
